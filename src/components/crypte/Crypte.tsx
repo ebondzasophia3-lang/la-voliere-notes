@@ -236,7 +236,7 @@ function Sanctuaire({
         <h2 className="pixel text-xs md:text-sm text-[#F5D06A]">Coffres du Royaume</h2>
         <button
           onClick={onAddDepot}
-          className="pixel text-[10px] md:text-xs border-2 border-[#D4A64F] bg-[#1D3B2A] text-[#F5F0E8] px-3 py-2 hover:bg-[#D4A64F] hover:text-[#0F1115] transition shadow-[2px_2px_0_#000]"
+          className="btn-rpg text-[10px] md:text-xs px-4 py-2"
         >
           ✚ Déposer
         </button>
@@ -515,7 +515,7 @@ function DepotForm({
           <button type="button" onClick={onClose} className="pixel text-[10px] border-2 border-[#CFC8BD]/40 px-3 py-2 text-[#CFC8BD] hover:text-[#F5D06A]">
             Annuler
           </button>
-          <button type="submit" className="pixel text-[10px] border-2 border-[#D4A64F] bg-[#1D3B2A] text-[#F5F0E8] px-3 py-2 hover:bg-[#D4A64F] hover:text-[#0F1115] shadow-[2px_2px_0_#000]">
+          <button type="submit" className="btn-rpg text-[10px] px-4 py-2">
             🪙 Confier
           </button>
         </div>
