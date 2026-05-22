@@ -215,7 +215,7 @@ const NOMS_TITRES = [
   "Protectrice des Lendemains",
   "Gardienne de l'Aube",
   "Dame de la Source Enchantée",
-  "Patriarche des Diamants",
+  "Matriarche des Diamants",
   "Détentrice du Sceau Ancien",
   "Régente de la Voûte",
   "Gardienne du Futur Stable",

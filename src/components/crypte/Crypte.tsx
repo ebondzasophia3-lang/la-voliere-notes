@@ -165,7 +165,7 @@ function DragonBanner({ pourcent, cal }: { pourcent: number; cal: ReturnType<typ
     <section className="mt-4 grid gap-3 md:grid-cols-3">
       <div className="border-2 border-[#6554C0]/50 bg-[#18222E]/70 p-3 rounded-sm flex items-center justify-between">
         <div>
-          <div className="text-[10px] text-[#CFC8BD]">Gardien du Sanctuaire</div>
+          <div className="text-[10px] text-[#CFC8BD]">Gardienne du Sanctuaire</div>
           <div className="pixel text-[#5FC7FF] text-xs md:text-sm mt-1">🐉 Éveil du Dragon</div>
           <div className="text-[10px] text-[#B8C3CC]">31 / 12 / 2028</div>
         </div>
