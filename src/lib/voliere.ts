@@ -53,11 +53,39 @@ export interface Titre {
   date: string;
 }
 
+export interface Habitante {
+  id: string;
+  nom: string;
+  titre: string;
+  role: string;
+  relation: string;
+  embleme: string;
+  portrait?: string;
+  note?: string;
+}
+
+export const ROLES_SUGGESTIONS = [
+  "villageoise",
+  "intendante",
+  "instructrice",
+  "marchande",
+  "gardienne",
+  "habitante du royaume",
+  "noble étrangère",
+  "princesse d'un autre royaume",
+  "alliée du royaume",
+  "promise",
+  "compagnonne",
+];
+
+export const EMBLEMES = ["🌹","🪶","🕊","🌙","⭐","🍃","🔮","👑","🗝","📜","🦋","🌸","⚜","🛡","🏹","🪷","🦌","🐺","🦊","🐉"];
+
 export interface VoliereState {
   attentions: Attention[];
   notes: NoteOiseau[];
   envoles: MessageEnvole[];
   titres: Titre[];
+  habitantes: Habitante[];
   premierLancement: boolean;
 }
 
@@ -86,6 +114,7 @@ export const initialState: VoliereState = {
   notes: [],
   envoles: [],
   titres: [],
+  habitantes: [],
   premierLancement: true,
 };
 

@@ -19,6 +19,7 @@ import {
   uid,
 } from "@/lib/voliere";
 import { Feathers, Lantern, Oiseau } from "@/components/voliere/Ambiance";
+import { Habitantes } from "@/components/voliere/Habitantes";
 
 type Tab = "registre" | "habitants" | "notes" | "archives" | "titres";
 
@@ -180,7 +181,7 @@ export function Voliere() {
               }`}
             >
               {t === "registre" && "📖 REGISTRE"}
-              {t === "habitants" && "👥 HABITANTS"}
+              {t === "habitants" && "👥 HABITANTES"}
               {t === "notes" && "📜 NOTES DES OISEAUX"}
               {t === "archives" && "🏛 ARCHIVES"}
               {t === "titres" && "🏆 TITRES"}
@@ -190,7 +191,7 @@ export function Voliere() {
 
         <main className="card-aged rounded-2xl p-5 md:p-8 min-h-[400px]">
           {tab === "registre" && <Registre state={state} setState={setState} />}
-          {tab === "habitants" && <Habitants state={state} />}
+          {tab === "habitants" && <Habitantes state={state} setState={setState} />}
           {tab === "notes" && <Notes state={state} setState={setState} />}
           {tab === "archives" && <Archives state={state} />}
           {tab === "titres" && <Titres state={state} />}
