@@ -1,26 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Voliere } from "@/components/voliere/Voliere";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "La Volière — Registre des Attentions du Royaume" },
+      {
+        name: "description",
+        content:
+          "La Volière, un registre vivant pixel art fantasy cosy pour conserver idées cadeaux, attentions, anniversaires et grandes joies du royaume.",
+      },
+      { property: "og:title", content: "La Volière — Registre des Attentions du Royaume" },
+      {
+        property: "og:description",
+        content: "Un lieu chaleureux pour préparer avec patience les joies à venir.",
+      },
+    ],
+  }),
+  component: Voliere,
 });
-
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
-}
