@@ -137,9 +137,9 @@ export function Voliere() {
               </div>
               <button
                 onClick={() => setShowForm(true)}
-                className="pixel text-[11px] bg-copper hover:bg-gold hover:text-night text-ivory px-4 py-3 rounded border border-gold/40 transition-all hover:scale-[1.02] active:scale-95"
+                className="btn-rpg text-[11px] px-5 py-3"
               >
-                ➕ NOUVEAU MESSAGE
+                ➕ Nouveau Message
               </button>
             </div>
           </div>
@@ -404,8 +404,8 @@ function CarteAttention({ attention: a, setState }: { attention: Attention; setS
           {expand ? "▲ FERMER" : "▼ DÉTAILS"}
         </button>
         <button onClick={ajouterRessource} className="text-[10px] pixel text-ivory/70 hover:text-gold">+ RESSOURCE</button>
-        <button onClick={offrir} className="text-[10px] pixel bg-forest/60 text-ivory px-2 py-1 rounded hover:bg-forest">🎁 OFFRIR</button>
-        <button onClick={retirer} className="text-[10px] pixel text-destructive hover:text-ivory ml-auto">🕊 RETIRER</button>
+        <button onClick={offrir} className="btn-rpg-emerald text-[10px] px-3 py-2">🎁 Offrir</button>
+        <button onClick={retirer} className="btn-rpg-ruby text-[10px] px-3 py-2 ml-auto">🕊 Retirer</button>
       </div>
 
       {expand && (
@@ -689,8 +689,8 @@ function FormulaireAttention({ onClose, onSave }: { onClose: () => void; onSave:
           <textarea value={comment} onChange={(e) => setComment(e.target.value)} className={`${inputCls} min-h-[50px]`} />
         </Field>
         <div className="flex gap-2 pt-2">
-          <button type="button" onClick={onClose} className="flex-1 pixel text-[10px] py-3 rounded border border-border text-ivory/70 hover:border-copper">ANNULER</button>
-          <button type="submit" className="flex-1 pixel text-[10px] py-3 rounded bg-copper text-ivory hover:bg-gold hover:text-night">🕊 DÉPOSER</button>
+          <button type="button" onClick={onClose} className="flex-1 pixel text-[10px] py-3 border-2 border-border text-ivory/70 hover:text-ivory">ANNULER</button>
+          <button type="submit" className="flex-1 btn-rpg-emerald text-[10px] py-3">🕊 Déposer</button>
         </div>
       </form>
     </Modal>

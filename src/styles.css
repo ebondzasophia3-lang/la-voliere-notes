@@ -103,17 +103,143 @@
 }
 
 @layer utilities {
-  .pixel { font-family: var(--font-pixel); image-rendering: pixelated; }
+  .pixel { font-family: var(--font-pixel); image-rendering: pixelated; -webkit-font-smoothing: none; }
   .text-glow { text-shadow: 0 0 12px oklch(0.82 0.13 85 / 60%); }
+  .text-pixel-shadow { text-shadow: 2px 2px 0 #000, 3px 3px 0 rgba(20,10,5,0.8); }
+
+  /* === PIXEL ART PREMIUM — UI gaming RPG === */
+  .pixel-border {
+    box-shadow:
+      0 0 0 2px #1a0f08,
+      0 0 0 4px #d4a64f,
+      0 0 0 6px #1a0f08,
+      inset 0 0 0 1px rgba(255,255,255,0.18),
+      4px 4px 0 0 #1a0f08;
+    border-radius: 0 !important;
+    image-rendering: pixelated;
+  }
+  .pixel-border-sm {
+    box-shadow:
+      0 0 0 2px #1a0f08,
+      0 0 0 3px #d4a64f,
+      inset 0 0 0 1px rgba(255,255,255,0.16),
+      2px 2px 0 0 #1a0f08;
+    border-radius: 0 !important;
+  }
+
+  /* Parchemin ivoire premium */
+  .parchment-premium {
+    background:
+      radial-gradient(ellipse at 10% 10%, rgba(120,75,30,0.18), transparent 55%),
+      radial-gradient(ellipse at 90% 90%, rgba(120,75,30,0.22), transparent 55%),
+      repeating-linear-gradient(0deg, transparent 0 3px, rgba(120,80,40,0.04) 3px 4px),
+      linear-gradient(135deg, #fbf3dc 0%, #f0e3bd 100%);
+    color: #2a1c0e;
+    position: relative;
+  }
+
+  /* Panneau d'inventaire RPG */
+  .panel-rpg {
+    background:
+      linear-gradient(180deg, rgba(245,236,212,0.05), transparent 40%),
+      repeating-linear-gradient(45deg, rgba(212,166,79,0.03) 0 2px, transparent 2px 4px),
+      linear-gradient(160deg, #2e2418 0%, #1a130b 100%);
+    box-shadow:
+      0 0 0 2px #1a0f08,
+      0 0 0 4px #d4a64f,
+      0 0 0 6px #1a0f08,
+      inset 0 0 0 1px rgba(245,208,106,0.20),
+      inset 0 2px 0 rgba(255,255,255,0.06),
+      6px 6px 0 0 rgba(0,0,0,0.55);
+    border-radius: 0 !important;
+  }
+
+  /* Slot d'inventaire (case coffre) */
+  .inventory-slot {
+    background:
+      radial-gradient(circle at 30% 25%, rgba(255,255,255,0.10), transparent 60%),
+      linear-gradient(135deg, #1a1208 0%, #2a1c0e 100%);
+    box-shadow:
+      0 0 0 2px #d4a64f,
+      0 0 0 3px #1a0f08,
+      inset 1px 1px 0 rgba(255,255,255,0.18),
+      inset -1px -1px 0 rgba(0,0,0,0.55);
+    border-radius: 0 !important;
+  }
+
+  /* Bouton RPG embossé */
+  .btn-rpg {
+    background: linear-gradient(180deg, #e8b85c 0%, #c08828 50%, #8b5e15 100%);
+    color: #1a0f08;
+    box-shadow:
+      0 0 0 2px #1a0f08,
+      inset 1px 1px 0 #fce29a,
+      inset -1px -1px 0 #6b4510,
+      3px 3px 0 0 #1a0f08;
+    border-radius: 0 !important;
+    font-family: var(--font-pixel);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: transform 80ms steps(2), box-shadow 80ms steps(2);
+  }
+  .btn-rpg:hover { background: linear-gradient(180deg, #f5d06a 0%, #d4a64f 50%, #9c6c1c 100%); }
+  .btn-rpg:active { transform: translate(2px, 2px); box-shadow: 0 0 0 2px #1a0f08, inset 1px 1px 0 #6b4510, inset -1px -1px 0 #fce29a, 1px 1px 0 0 #1a0f08; }
+  .btn-rpg-emerald {
+    background: linear-gradient(180deg, #6dd28c 0%, #2f9a52 50%, #155a2c 100%);
+    color: #fff8e0;
+    box-shadow: 0 0 0 2px #1a0f08, inset 1px 1px 0 #b7f0c8, inset -1px -1px 0 #0a3318, 3px 3px 0 0 #1a0f08;
+    border-radius: 0 !important;
+    font-family: var(--font-pixel); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .btn-rpg-ruby {
+    background: linear-gradient(180deg, #ef6a6a 0%, #c43030 50%, #6a1010 100%);
+    color: #fff8e0;
+    box-shadow: 0 0 0 2px #1a0f08, inset 1px 1px 0 #ffb0b0, inset -1px -1px 0 #3a0808, 3px 3px 0 0 #1a0f08;
+    border-radius: 0 !important;
+    font-family: var(--font-pixel); text-transform: uppercase; letter-spacing: 0.05em;
+  }
+
+  .chest-icon {
+    display: inline-block;
+    filter: drop-shadow(2px 2px 0 #1a0f08) drop-shadow(0 0 6px rgba(245,208,106,0.5));
+    image-rendering: pixelated;
+  }
+
+  .royal-heading {
+    font-family: var(--font-serif-royal);
+    color: #3a1f08;
+    text-shadow: 0 1px 0 #fbf3dc, 0 2px 0 rgba(0,0,0,0.15);
+    letter-spacing: 0.02em;
+  }
+
+  /* Compat — anciens wrappers réharmonisés */
   .card-aged {
-    background: linear-gradient(145deg, oklch(0.3 0.045 260), oklch(0.26 0.04 260));
-    border: 1px solid oklch(0.62 0.12 50 / 35%);
-    box-shadow: var(--shadow-deep), inset 0 1px 0 oklch(0.82 0.13 85 / 10%);
+    background:
+      linear-gradient(180deg, rgba(245,236,212,0.05), transparent 40%),
+      linear-gradient(160deg, #2e2418 0%, #1a130b 100%);
+    box-shadow:
+      0 0 0 2px #1a0f08,
+      0 0 0 4px #d4a64f,
+      0 0 0 6px #1a0f08,
+      inset 0 2px 0 rgba(255,255,255,0.07),
+      6px 6px 0 0 rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 0 !important;
   }
   .parchment {
-    background: linear-gradient(135deg, oklch(0.88 0.05 80), oklch(0.82 0.06 70));
-    color: oklch(0.25 0.05 40);
-    border: 1px solid oklch(0.55 0.08 50);
+    background:
+      radial-gradient(ellipse at 10% 10%, rgba(120,75,30,0.16), transparent 55%),
+      radial-gradient(ellipse at 90% 90%, rgba(120,75,30,0.20), transparent 55%),
+      repeating-linear-gradient(0deg, transparent 0 3px, rgba(120,80,40,0.04) 3px 4px),
+      linear-gradient(135deg, #fbf3dc 0%, #f0e3bd 100%);
+    color: #2a1c0e;
+    box-shadow:
+      0 0 0 2px #3a2818,
+      0 0 0 3px #d4a64f,
+      0 0 0 5px #3a2818,
+      3px 3px 0 0 #3a2818;
+    border: none;
+    border-radius: 0 !important;
   }
 }
 
