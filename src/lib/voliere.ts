@@ -114,6 +114,7 @@ export const initialState: VoliereState = {
   notes: [],
   envoles: [],
   titres: [],
+  habitantes: [],
   premierLancement: true,
 };
 
