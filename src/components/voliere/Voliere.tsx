@@ -181,7 +181,7 @@ export function Voliere() {
               }`}
             >
               {t === "registre" && "📖 REGISTRE"}
-              {t === "habitants" && "👥 HABITANTS"}
+              {t === "habitants" && "👥 HABITANTES"}
               {t === "notes" && "📜 NOTES DES OISEAUX"}
               {t === "archives" && "🏛 ARCHIVES"}
               {t === "titres" && "🏆 TITRES"}
